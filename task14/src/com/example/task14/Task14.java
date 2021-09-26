@@ -4,10 +4,15 @@ public class Task14 {
 
 
     public static int reverse(int value) {
+        int res=0;
 
-        // TODO напишите здесь код, переставляющий цифры числа в обратном порядке
+        while(value != 0){
+            res *= 10;
+            res += value % 10;
+            value /= 10;
+        }
 
-        return 0;
+        return res;
     }
 
     public static void main(String[] args) {
