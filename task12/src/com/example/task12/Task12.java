@@ -1,5 +1,7 @@
 package com.example.task12;
 
+import com.sun.java.swing.plaf.windows.WindowsTextAreaUI;
+
 import java.math.BigDecimal;
 
 public class Task12 {
@@ -16,8 +18,13 @@ public class Task12 {
         }
         return sum;
         */
+        BigDecimal res = sum;
+        for(int i = 0; i < 12; ++i) {
+            BigDecimal multipleRes = res.multiply(percent).setScale(9, BigDecimal.ROUND_HALF_UP);
+            res = res.add(multipleRes).setScale(9, BigDecimal.ROUND_HALF_UP);
+        }
 
-        return BigDecimal.ZERO;
+        return res;
     }
 
     public static void main(String[] args) {
