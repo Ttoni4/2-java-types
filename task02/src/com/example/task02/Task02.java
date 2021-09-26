@@ -3,10 +3,19 @@ package com.example.task02;
 public class Task02 {
 
     public static String solution(String input) {
+        long val = Long.parseLong(input);
 
-        // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
+        if(val >= Byte.MIN_VALUE && val <= Byte.MAX_VALUE)
+            return "byte";
 
-        return "";
+        else if(val >= Short.MIN_VALUE && val <= Short.MAX_VALUE)
+            return "short";
+
+        else if(val >= Integer.MIN_VALUE && val <= Integer.MAX_VALUE)
+            return "int";
+
+        else
+            return "long";
     }
 
     public static void main(String[] args) {
