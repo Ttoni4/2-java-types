@@ -11,6 +11,7 @@ public class Task12 {
             res = res.add(multipleRes).setScale(9, BigDecimal.ROUND_HALF_UP);
         }
 
+
         return res;
     }
 
